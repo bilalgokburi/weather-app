@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #43affc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FORM - HEADİNG*/
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#form {
+  margin: 20px auto;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+.inputBox {
+  text-align: center;
+  display: flex;
+  width: 300px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  opacity: 0.8;
+}
+
+input::placeholder {
+  color: #d5d5d5;
+}
+
+.inputBox input:focus {
+  outline: 0;
+}
+
+.inputBox button {
+  border: none;
+  background: #fff;
+  padding: 0 15px;
+  opacity: 0.8;
+  color: #444;
+  cursor: pointer;
+}
+
+/* INFO */
+
+.info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.temp-icon img {
+  width: 130px;
+}
+
+.info-container > * {
+  margin: 6px 0;
+}
+
+#temperature {
+  font-size: 3rem;
+}
+
+.feel {
+  border-top: 1px solid #b6a8a8;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px 0;
+  height: 40px;
+}
+
+.bracket {
+  border-right: 1px solid #b6a8a8;
+  width: 50%;
+}
+
+/* LANDING */
+
+.landing-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  height: 150px;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.landing-container input {
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.landing-container input:focus {
+  outline-color: #43affc;
+}
+
+/* RESPONSİVE */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .inputBox {
+    width: 80%;
+  }
+
+  .info-container {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .landing-container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
