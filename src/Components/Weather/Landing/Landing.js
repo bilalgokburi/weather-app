@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function Landing({ setkeyValue, keyValue, setWeather }) {
   let apiKey = "";
   const alertDOM = document.querySelector("#landing-alert");
@@ -39,9 +40,10 @@ function Landing({ setkeyValue, keyValue, setWeather }) {
     [keyValue]
   );
 
+
   return (
     <>
-      <div className="landing-container">
+    <div className="landing-container">
         <form onSubmit={checkKey}>
           <p>Please enter an api key.</p>
           <input

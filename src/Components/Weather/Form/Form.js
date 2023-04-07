@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { BsSearch } from "react-icons/bs";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import WeatherContext from "../../../context/WeatherContext";
 
-function Form({ setInfo, setState, keyValue, setIsKeyTrue }) {
+function Form({ setState, keyValue, setIsKeyTrue }) {
   const alertDOM = document.querySelector("#form-alert");
   const ALERT2 = `
     <div class="alert alert-danger" role="alert">
@@ -11,19 +12,8 @@ function Form({ setInfo, setState, keyValue, setIsKeyTrue }) {
     </div>
   `;
 
-  // keep the UI untill page refreshed and new tab opened
-  const [localForm, setLocalForm] = useState([]);
-  useEffect(() => {
-    localStorage.setItem("Form", JSON.stringify(localForm));
-  }, [localForm]);
 
-  useEffect(() => {
-    const savedForm = localStorage.getItem("Form");
-    if (savedForm) {
-      setLocalForm(JSON.parse(savedForm));
-    }
-  }, []);
-
+  const {setInfo} = useContext(WeatherContext)
   const [city, setCity] = useState("");
 
   async function formSubmit(e) {

@@ -1,22 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { WiHumidity } from "react-icons/wi";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdThermostat } from "react-icons/md";
+import WeatherContext from "../../../context/WeatherContext";
 
-function Info({ info, state }) {
+
+function Info({ state }) {
   // keep the UI untill page refreshed and new tab opened
   const [localInfo, setLocalInfo] = useState([]);
+  const {info} = useContext(WeatherContext)
 
-  useEffect(() => {
-    localStorage.setItem("Info", JSON.stringify(localInfo));
-  }, [localInfo]);
-
-  useEffect(() => {
-    const savedInfo = localStorage.getItem("Info");
-    if (savedInfo) {
-      setLocalInfo(JSON.parse(savedInfo));
-    }
-  }, []);
 
   return state ? (
     <div className="info-container">

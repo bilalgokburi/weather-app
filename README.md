@@ -1,18 +1,20 @@
-# Weather App
+# Vatansoft Weather App
 
 ## Description
 
-here is a project by working API in it and showing current weather of cities in Turkey on  UI.  
+here is a project by working API in it and showing current popular movies on  UI.  
 
 ## Features
 
 - React
 - Bootstrap
-- Local storage
-- API with axios
+- React-router-dom
+- Using Movie DB Api and fetch data by axios.
+- React Formik
+- Using React Hook Form for Validation.
 
 ## Kurulum
-- git clone https://github.com/bilalgokburi/weather-app 
+- git clone https://github.com/bilalgokburi/vatansoft-weather-app 
 1. npm update 
 2. npm start
  
