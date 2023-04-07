@@ -1,4 +1,4 @@
-# Vatansoft Weather App
+# Weather App
 
 ## Description
 
@@ -14,7 +14,7 @@ here is a project by working API in it and showing current popular movies on  UI
 - Using React Hook Form for Validation.
 
 ## Kurulum
-- git clone https://github.com/bilalgokburi/vatansoft-weather-app 
+- git clone https://github.com/bilalgokburi/weather-app 
 1. npm update 
 2. npm start
  
